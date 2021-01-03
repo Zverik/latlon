@@ -11,10 +11,26 @@
     <script src="latlon.js"></script>
     <style>
       html, body, #map { margin: 0; height: 100%; }
+      #note {
+        display: none;
+        width: auto;
+        border-radius: 5px;
+        background: gray;
+        font-family: sans-serif;
+        color: white;
+        text-align: left;
+        font-weight: bold;
+        position: absolute;
+        left: 60px;
+        top: 40px;
+        padding: 5px 10px;
+        z-index: 999;
+      }
     </style>
   </head>
   <body>
     <div id="map"></div>
+    <div id="note">Copied.</div>
   </body>
 </html>
     

@@ -18,6 +18,12 @@ function copyText(str) {
 
   str = str.replace('{lat}', c.lat.toFixed(d)).replace('{lon}', c.lng.toFixed(d));
   navigator.clipboard.writeText(str)
+    .then(function() {
+      document.getElementById('note').style.display = 'block';
+      window.setTimeout(function() {
+        document.getElementById('note').style.display = 'none';
+      }, 1000);
+    })
     .catch(function(err) { alert('Error when copying: ', err); });
 }
 
